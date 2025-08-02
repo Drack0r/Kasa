@@ -1,0 +1,8 @@
+// Base
+@use "./base/reset";
+@use "./base/global";
+@use "./base/typography";
+
+// Layout
+@use "./layout/header";
+@use "./layout/footer";

@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+
+.header {
+  width: 86.1%;
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  height: 68px;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 57px;
+}
+
+.header__nav-link {
+  font-size: 1.33rem;
+
+  &--active {
+    text-decoration: underline;
+  }
+}
+
+// TO DO : Break point à width = 770px

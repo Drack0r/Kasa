@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+  width: 100%;
+  padding-top: 66px;
+  padding-bottom: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $black;
+}
+
+.footer__logo {
+  height: 39px;
+  margin-bottom: 28.5px;
+}
+
+.footer__copyright {
+  font-size: 1.33rem;
+  color: $white;
+}
