@@ -4,7 +4,7 @@ import PropertyDetails from "./pages/PropertyDetails";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
-export default function App() {
+export default function Router() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />

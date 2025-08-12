@@ -1,29 +1,29 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
-function Hero() {
-  return (
-    <section className="hero">
-      <span className="hero__text">Chez vous, partout ailleurs</span>
-    </section>
-  );
-}
-
-function Body() {
-  return (
-    <div className="body">
-      <Hero />
-    </div>
-  );
-}
+import Logo from "../components/Logo";
+import Navigation from "../components/Navigation";
+import Hero from "../components/Hero";
+import CopyrightNotice from "../components/CopyrightNotice";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      {/* <div className="section-placeholder"></div> */}
-      <Body />
-      <Footer />
+      <header className="header">
+        <Logo logoTheme={"light"} />
+        <Navigation />
+      </header>
+
+      <div className="body">
+        <Hero
+          textContent={"Chez vous, partout et ailleurs"}
+          backgroundImage="/src/assets/images/backgrounds/hero-background-1.jpg"
+          isInnerShadowed={true}
+          isBoxShadowed={true}
+        />
+      </div>
+
+      <footer className="footer">
+        <Logo logoTheme={"dark"} />
+        <CopyrightNotice />
+      </footer>
     </>
   );
 }

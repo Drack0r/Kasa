@@ -1,8 +1,9 @@
 @use "../abstracts/variables" as *;
 
 .header {
-  width: 86.1%;
+  width: 100%;
   margin-top: 45px;
+  padding: 0 6.9%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,5 +26,3 @@
     text-decoration: underline;
   }
 }
-
-// TO DO : Break point à width = 770px

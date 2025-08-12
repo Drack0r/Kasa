@@ -1,12 +1,19 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Logo from "../components/Logo";
+import Navigation from "../components/Navigation";
+import CopyrightNotice from "../components/CopyrightNotice";
 
 export default function About() {
   return (
     <>
-      <Header />
-      <div className="section-placeholder"></div>
-      <Footer />
+      <header className="header">
+        <Logo logoTheme={"light"} />
+        <Navigation />
+      </header>
+
+      <footer className="footer">
+        <Logo logoTheme={"dark"} />
+        <CopyrightNotice />
+      </footer>
     </>
   );
 }

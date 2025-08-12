@@ -7,20 +7,12 @@ body {
   background: $white;
 }
 
-#root {
+#app {
   width: 100%;
-  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px;
 
   // border: 1px dashed #0011ff;
-}
-
-.section-placeholder {
-  width: 100%;
-  height: calc(100vh - 411px);
-  background: #eeeeee;
-  border-radius: 20px;
 }

@@ -1,16 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-function HeaderLogo() {
-  return (
-    <img
-      src="/src/assets/images/header-logo.png"
-      alt="Logo de Kasa"
-      className="header__logo"
-    />
-  );
-}
-
-function HeaderNav() {
+export default function Navigation() {
   const navLinkClass = ({ isActive }) =>
     `header__nav-link ${isActive ? "header__nav-link--active" : ""}`;
 
@@ -30,14 +20,5 @@ function HeaderNav() {
         </li>
       </ul>
     </nav>
-  );
-}
-
-export default function Header() {
-  return (
-    <header className="header">
-      <HeaderLogo />
-      <HeaderNav />
-    </header>
   );
 }
