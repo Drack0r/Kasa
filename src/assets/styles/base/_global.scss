@@ -1,18 +1,13 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-column-center;
   background: $white;
 }
 
 #app {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-column-center;
   gap: 50px;
-
-  // border: 1px dashed #0011ff;
+  width: 100%;
 }

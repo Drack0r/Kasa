@@ -1,15 +1,17 @@
 export default function Logo({ logoTheme }) {
-  const logoLightSrc = "/src/assets/images/logo/logo-light.png";
-  const logoDarkSrc = "/src/assets/images/logo/logo-dark.png";
+  const logo = {
+    light: "/src/assets/images/logo/logo-light.png",
+    dark: "/src/assets/images/logo/logo-dark.png",
+  };
 
   let logoSrc;
   let logoClassName;
 
   if (logoTheme === "light") {
-    logoSrc = logoLightSrc;
+    logoSrc = logo.light;
     logoClassName = "header__logo";
   } else if (logoTheme === "dark") {
-    logoSrc = logoDarkSrc;
+    logoSrc = logo.dark;
     logoClassName = "footer__logo";
   }
 

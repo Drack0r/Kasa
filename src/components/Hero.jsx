@@ -13,7 +13,7 @@ export default function Hero({
       className={heroClass}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <span className="hero__text">{textContent}</span>
+      <h1 className="hero__text">{textContent}</h1>
     </section>
   );
 }

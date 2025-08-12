@@ -1,6 +1,8 @@
+import propertyData from "../data/logements.json";
 import Logo from "../components/Logo";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
+import GalleryCard from "../components/GalleryCard";
 import CopyrightNotice from "../components/CopyrightNotice";
 
 export default function Home() {
@@ -18,6 +20,12 @@ export default function Home() {
           isInnerShadowed={true}
           isBoxShadowed={true}
         />
+
+        <section className="gallery">
+          {propertyData.map((property) => {
+            return <GalleryCard propertyData={property} key={property.id} />;
+          })}
+        </section>
       </div>
 
       <footer className="footer">

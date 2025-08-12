@@ -4,9 +4,27 @@ $font-family-primary: "Montserrat", sans-serif;
 // Color
 $white: #ffffff;
 $black: #000000;
+$light-gray: #f6f6f6;
+$light-red: #ff6060;
 
 // Box-shadow
 $box-shadow-primary: 0 4px 4px rgba($black, 0.25);
+$box-shadow-secondary: 0 4px 4px rgba($black, 0.1);
+$box-shadow-tertiary: 0px 4px 10px rgba($black, 0.5);
+
+// Text-shadow
+$text-shadow-primary: -1px -1px 0 $black, 1px -1px 0 $black, -1px 1px 0 $black,
+  1px 1px 0 $black;
+$text-shadow-secondary: -1px -1px 0 rgba($black, 0.1),
+  1px -1px 0 rgba($black, 0.1), -1px 1px 0 rgba($black, 0.1),
+  1px 1px 0 rgba($black, 0.1);
 
 // Linear-gradient
-$linear-gradient-black: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+$linear-gradient-banner: rgba(0, 0, 0, 0.6);
+$linear-gradient-card: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(10, 10, 10, 0) 42%,
+  rgba(4, 4, 4, 0.205) 99.99%,
+  rgba(0, 0, 0, 0.5) 100%
+);
