@@ -7,5 +7,9 @@
 @use "./layout/header";
 @use "./layout/footer";
 
+// Components
+@use "./components/hero";
+@use "./components/gallery";
+
 // Pages
 @use "./pages/home";

@@ -7,15 +7,28 @@
   width: 100%;
   margin-top: 45px;
   padding: 0 6.9%;
+
+  @media (max-width: 606px) {
+    margin-top: 20px;
+    padding: 0 5.3%;
+  }
 }
 
 .header__logo {
   height: 68px;
+
+  @media (max-width: 606px) {
+    height: 47px;
+  }
 }
 
 .header__nav-list {
   @include flex-center;
   gap: 57px;
+
+  @media (max-width: 606px) {
+    gap: 26px;
+  }
 }
 
 .header__nav-link {
@@ -23,5 +36,9 @@
 
   &--active {
     text-decoration: underline;
+  }
+
+  @media (max-width: 606px) {
+    font-size: 0.66rem;
   }
 }
