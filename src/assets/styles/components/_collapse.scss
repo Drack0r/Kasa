@@ -4,8 +4,16 @@
 .collapse-container {
   @include flex-column-center;
   gap: 30px;
-  min-height: 300px;
+  min-height: 290px;
   width: 83.4%;
+
+  @media (max-width: 856px) {
+    width: 81.4%;
+  }
+
+  @media (max-width: 606px) {
+    width: 100%;
+  }
 }
 
 .collapse {
@@ -18,11 +26,29 @@
   padding: 10px 1.5% 8px;
   background: $light-red;
   border-radius: 5px;
+
+  @media (max-width: 856px) {
+    padding: 10px 1.5% 10px;
+    height: 52px;
+  }
+
+  @media (max-width: 606px) {
+    padding: 10px 2.9%;
+    height: 30px;
+  }
 }
 
 .collapse__title {
   font-size: 1.33rem;
   color: $white;
+
+  @media (max-width: 856px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 606px) {
+    font-size: 0.72rem;
+  }
 }
 
 .collapse__btn {
@@ -39,6 +65,15 @@
     font-size: 1.4rem;
     color: $white;
     transition: all 0.3s ease-in-out;
+
+    @media (max-width: 606px) {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 606px) {
+    height: 30px;
+    width: 30px;
   }
 }
 
@@ -50,10 +85,22 @@
   padding: 16px 1.95% 20px 1.95%;
   background: rgba($light-gray, 0.45);
   border-radius: 5px 0;
+
+  @media (max-width: 856px) {
+    padding: 25px 4.8% 20px 3.4%;
+  }
+
+  @media (max-width: 606px) {
+    padding: 13px 5.9% 19px 5.9%;
+  }
 }
 
 .collapse__text {
   font-weight: 400;
   line-height: 1.43;
   color: $black;
+
+  @media (max-width: 606px) {
+    font-size: 0.66rem;
+  }
 }
