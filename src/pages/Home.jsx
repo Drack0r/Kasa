@@ -7,7 +7,7 @@ import CopyrightNotice from "../components/CopyrightNotice";
 
 export default function Home() {
   return (
-    <>
+    <div className="homepage">
       <header className="header">
         <Logo logoTheme={"light"} />
         <Navigation />
@@ -32,6 +32,6 @@ export default function Home() {
         <Logo logoTheme={"dark"} />
         <CopyrightNotice />
       </footer>
-    </>
+    </div>
   );
 }

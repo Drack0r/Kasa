@@ -7,11 +7,21 @@ body {
 }
 
 #app {
-  @include flex-column-center;
-  gap: 50px;
   width: 100%;
 
-  @media (max-width: 606px) {
-    gap: 27px;
+  & .homepage {
+    @include flex-column-center;
+    gap: 50px;
+    width: 100%;
+
+    @media (max-width: 606px) {
+      gap: 27px;
+    }
+  }
+
+  & .about {
+    @include flex-column-center;
+    gap: 38px;
+    width: 100%;
   }
 }

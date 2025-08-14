@@ -27,7 +27,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: $linear-gradient-banner;
+      background: $linear-gradient-banner-primary;
       border-radius: inherit;
     }
   }
@@ -36,6 +36,16 @@
     height: 111px;
     margin-bottom: 22px;
     border-radius: 10px;
+  }
+}
+
+.about .hero {
+  margin-bottom: 38px;
+
+  &--inner-shadowed {
+    &::before {
+      background: $linear-gradient-banner-secondary;
+    }
   }
 }
 
