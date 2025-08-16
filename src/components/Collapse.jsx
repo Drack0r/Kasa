@@ -13,18 +13,23 @@ export default function Collapse({ title, textContent }) {
         <h2 className="collapse__title">{title}</h2>
 
         <button className="collapse__btn" onClick={handleClick}>
-          <i
-            className={`fa-solid fa-chevron-up 
-              ${isOpen ? "collapse__icon--rotated" : ""}`}
-          ></i>
+          <img
+            src="/src/assets/images/icons/chevron-up.png"
+            alt="Icône de chevron"
+            className={`collapse__icon ${
+              isOpen ? "collapse__icon--rotated" : ""
+            }`}
+          />
         </button>
       </div>
 
-      {isOpen && (
-        <div className="collapse__text-container">
-          <p className="collapse__text">{textContent}</p>
-        </div>
-      )}
+      <div
+        className={`collapse__text-container ${
+          isOpen ? "collapse__text-container--open" : ""
+        }`}
+      >
+        <p className="collapse__text">{textContent}</p>
+      </div>
     </article>
   );
 }

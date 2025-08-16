@@ -7,17 +7,17 @@
   padding: 66px 0 29px;
   background: $black;
 
-  @media (max-width: 606px) {
+  @media (max-width: $breakpoint-mobile) {
     padding: 66px 0 58px;
   }
 }
 
-.footer__logo {
+.footer__logo img {
   height: 40px;
   margin-bottom: 28.5px;
 
-  @media (max-width: 606px) {
-    margin-bottom: 15.1px;
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 15px;
   }
 }
 
@@ -26,7 +26,7 @@
   font-weight: 400;
   color: $white;
 
-  @media (max-width: 606px) {
+  @media (max-width: $breakpoint-mobile) {
     width: 30%;
     font-size: 0.66rem;
     text-align: center;

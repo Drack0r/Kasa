@@ -1,3 +1,7 @@
+// Abstracts
+@use "./abstracts/variables" as *;
+@use "./abstracts/mixins" as *;
+
 // Base
 @use "./base/reset";
 @use "./base/global";
@@ -11,6 +15,10 @@
 @use "./components/hero";
 @use "./components/gallery";
 @use "./components/collapse";
+@use "./components/loading";
 
 // Pages
 @use "./pages/home";
+@use "./pages/about";
+@use "./pages/not-found";
+@use "./pages/property-details";

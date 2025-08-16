@@ -15,5 +15,9 @@ export default function Logo({ logoTheme }) {
     logoClassName = "footer__logo";
   }
 
-  return <img src={logoSrc} alt="Logo de Kasa" className={logoClassName} />;
+  return (
+    <h1 className={logoClassName}>
+      <img src={logoSrc} alt="Logo de Kasa" />
+    </h1>
+  );
 }

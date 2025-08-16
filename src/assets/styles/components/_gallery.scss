@@ -9,7 +9,7 @@
   background: $light-gray;
   border-radius: 25px;
 
-  @media (max-width: 606px) {
+  @media (max-width: $breakpoint-mobile) {
     gap: 20px;
     padding: 0;
     background: none;
@@ -29,7 +29,7 @@
     width: 100%;
   }
 
-  @media (max-width: 606px) {
+  @media (max-width: $breakpoint-mobile) {
     height: 255px;
   }
 }
@@ -57,8 +57,8 @@
   }
 
   &:hover {
-    transform: scale(1.02);
     box-shadow: $box-shadow-tertiary;
+    transform: scale(1.02);
   }
 }
 

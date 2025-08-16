@@ -1,14 +1,12 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-body {
+#app .about-page {
   @include flex-column-center;
-  background: $white;
-}
-
-#app {
+  gap: 38px;
   width: 100%;
 }
-.error {
-  color: $red;
+
+.about-page .hero {
+  margin-bottom: 38px;
 }

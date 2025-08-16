@@ -6,6 +6,7 @@ $white: #ffffff;
 $black: #000000;
 $light-gray: #f6f6f6;
 $light-red: #ff6060;
+$red: #f03636;
 
 // Box-shadow
 $box-shadow-primary: 0 4px 4px rgba($black, 0.25);
@@ -20,8 +21,6 @@ $text-shadow-secondary: -1px -1px 0 rgba($black, 0.1),
   1px 1px 0 rgba($black, 0.1);
 
 // Linear-gradient
-$linear-gradient-banner-primary: rgba(0, 0, 0, 0.6);
-$linear-gradient-banner-secondary: rgba(0, 0, 0, 0.3);
 $linear-gradient-card: linear-gradient(
   180deg,
   rgba(255, 255, 255, 0) 0%,
@@ -29,3 +28,8 @@ $linear-gradient-card: linear-gradient(
   rgba(4, 4, 4, 0.205) 99.99%,
   rgba(0, 0, 0, 0.5) 100%
 );
+
+// Responsive Breakpoints
+$breakpoint-mobile: 606px;
+$breakpoint-tablet: 856px;
+$breakpoint-desktop: 1240px;

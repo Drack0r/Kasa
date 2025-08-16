@@ -8,16 +8,16 @@
   margin-top: 45px;
   padding: 0 6.9%;
 
-  @media (max-width: 606px) {
+  @media (max-width: $breakpoint-mobile) {
     margin-top: 20px;
     padding: 0 5.3%;
   }
 }
 
-.header__logo {
+.header__logo img {
   height: 68px;
 
-  @media (max-width: 606px) {
+  @media (max-width: $breakpoint-mobile) {
     height: 47px;
   }
 }
@@ -26,19 +26,40 @@
   @include flex-center;
   gap: 57px;
 
-  @media (max-width: 606px) {
+  @media (max-width: $breakpoint-mobile) {
     gap: 26px;
   }
 }
 
 .header__nav-link {
+  position: relative;
   font-size: 1.33rem;
+  font-weight: 400;
 
   &--active {
     text-decoration: underline;
   }
 
-  @media (max-width: 606px) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    bottom: 0;
+    right: 0;
+    height: 120%;
+    width: 120%;
+    background: transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    background: rgba($black, 0.04);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
     font-size: 0.66rem;
   }
 }

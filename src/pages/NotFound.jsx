@@ -10,6 +10,8 @@ export default function NotFound() {
         <Navigation />
       </header>
 
+      <main className="body"></main>
+
       <footer className="footer">
         <Logo logoTheme={"dark"} />
         <CopyrightNotice />

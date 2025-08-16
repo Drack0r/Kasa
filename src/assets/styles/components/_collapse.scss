@@ -5,13 +5,14 @@
   @include flex-column-center;
   gap: 30px;
   min-height: 290px;
-  width: 83.4%;
+  width: 82.5%;
 
-  @media (max-width: 856px) {
+  @media (max-width: $breakpoint-tablet) {
     width: 81.4%;
   }
 
-  @media (max-width: 606px) {
+  @media (max-width: $breakpoint-mobile) {
+    gap: 20px;
     width: 100%;
   }
 }
@@ -23,18 +24,18 @@
 .collapse__top-bar {
   @include flex-center;
   justify-content: space-between;
-  padding: 10px 1.5% 8px;
+  padding: 11px 1.5% 9px;
   background: $light-red;
   border-radius: 5px;
 
-  @media (max-width: 856px) {
-    padding: 10px 1.5% 10px;
+  @media (max-width: $breakpoint-tablet) {
     height: 52px;
+    padding: 10px 1.5% 10px;
   }
 
-  @media (max-width: 606px) {
-    padding: 10px 2.9%;
+  @media (max-width: $breakpoint-mobile) {
     height: 30px;
+    padding: 10px 2.9%;
   }
 }
 
@@ -42,11 +43,11 @@
   font-size: 1.33rem;
   color: $white;
 
-  @media (max-width: 856px) {
+  @media (max-width: $breakpoint-tablet) {
     font-size: 1rem;
   }
 
-  @media (max-width: 606px) {
+  @media (max-width: $breakpoint-mobile) {
     font-size: 0.72rem;
   }
 }
@@ -61,17 +62,16 @@
   border: none;
   cursor: pointer;
 
-  & i {
-    font-size: 1.4rem;
-    color: $white;
+  & img {
+    height: 15px;
     transition: all 0.3s ease-in-out;
 
-    @media (max-width: 606px) {
-      font-size: 1rem;
+    @media (max-width: $breakpoint-mobile) {
+      height: 9px;
     }
   }
 
-  @media (max-width: 606px) {
+  @media (max-width: $breakpoint-mobile) {
     height: 30px;
     width: 30px;
   }
@@ -82,16 +82,28 @@
 }
 
 .collapse__text-container {
-  padding: 16px 1.95% 20px 1.95%;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 1.95%;
   background: rgba($light-gray, 0.45);
-  border-radius: 5px 0;
+  border-radius: 0 0 5px 5px;
+  transition: all 0.2s;
 
-  @media (max-width: 856px) {
-    padding: 25px 4.8% 20px 3.4%;
+  &--open {
+    max-height: 500px;
+    padding: 16px 1.95% 20px 1.95%;
   }
 
-  @media (max-width: 606px) {
-    padding: 13px 5.9% 19px 5.9%;
+  @media (max-width: $breakpoint-tablet) {
+    &--open {
+      padding: 25px 4.8% 20px 3.4%;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    &--open {
+      padding: 13px 5.9% 19px 5.9%;
+    }
   }
 }
 
@@ -100,7 +112,7 @@
   line-height: 1.43;
   color: $black;
 
-  @media (max-width: 606px) {
+  @media (max-width: $breakpoint-mobile) {
     font-size: 0.66rem;
   }
 }
