@@ -87,7 +87,7 @@
   padding: 0 1.95%;
   background: rgba($light-gray, 0.45);
   border-radius: 0 0 5px 5px;
-  transition: all 0.2s;
+  transition: all 0.2s ease-in-out;
 
   &--open {
     max-height: 500px;

@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.error-display {
+  @include flex-column-center;
+  gap: 139px;
+
+  @media (max-width: $breakpoint-tablet) {
+    gap: 126px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    gap: 113px;
+  }
+}
+
+.error__type {
+  font-size: 16rem;
+  font-weight: 600;
+  color: $light-red;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 10.66rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 5.33rem;
+  }
+}
+
+.error__message {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.43;
+  color: $light-red;
+
+  @media (max-width: 997px) {
+    text-align: center;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1rem;
+  }
+}
+
+.responsive-br {
+  display: none;
+
+  @media (max-width: 997px) {
+    display: block;
+  }
+}
+
+.error__home-link {
+  font-weight: 400;
+  color: $black;
+  text-decoration: underline;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 0.88rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 0.77rem;
+  }
+}

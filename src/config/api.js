@@ -4,5 +4,5 @@ export const API_ENDPOINTS = {
 };
 
 export const TIMEOUTS = {
-  LOADING_DELAY: 300,
+  LOADING_DELAY: 10000,
 };

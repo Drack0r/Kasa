@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.not-found-page {
+  @include flex-column-center;
+  gap: 139px;
+
+  @media (max-width: $breakpoint-mobile) {
+    gap: 113px;
+  }
+}
