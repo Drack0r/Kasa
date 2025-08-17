@@ -216,9 +216,10 @@ Le hook gère automatiquement :
 
 L'application est entièrement responsive avec 3 breakpoints principaux :
 
-- **Desktop** : > 856px - Layout complet
-- **Tablet** : 606px - 856px - Layout adapté
-- **Mobile** : < 606px - Layout mobile optimisé
+- **Desktop** : > 1280px - Layout Desktop complet
+- **Laptop** : 769px - 1279px - Layout Laptop optimisé
+- **Tablet** : 481px - 768px - Layout tablette optimisé
+- **Mobile** : < 480px - Layout mobile optimisé
 
 ### Breakpoints Sass
 
@@ -260,16 +261,10 @@ import PropTypes from "prop-types";
 export default function ComponentName({ prop1, prop2 }) {
   return <div className="component-name">{/* JSX */}</div>;
 }
-
-// PropTypes
-ComponentName.propTypes = {
-  prop1: PropTypes.string.isRequired,
-  prop2: PropTypes.bool,
-};
 ```
 
 ---
 
 **Développé avec ❤️ pour OpenClassrooms**
 
-_Projet d'apprentissage - Formation Développeur Web_
+_Projet n°7 - Formation Intégrateur Web_

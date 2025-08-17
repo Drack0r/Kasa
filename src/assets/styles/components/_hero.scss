@@ -35,6 +35,12 @@
     }
   }
 
+  @media (max-width: $breakpoint-tablet) {
+    height: 167px;
+    margin-bottom: 32px;
+    border-radius: 15px;
+  }
+
   @media (max-width: $breakpoint-mobile) {
     height: 111px;
     margin-bottom: 22px;
@@ -49,6 +55,10 @@
   color: $white;
   text-shadow: $text-shadow-primary, $box-shadow-primary;
   z-index: 1;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 2rem;
+  }
 
   @media (max-width: $breakpoint-mobile) {
     font-size: 1.33rem;

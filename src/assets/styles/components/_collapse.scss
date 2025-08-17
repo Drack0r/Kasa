@@ -4,11 +4,11 @@
 .collapse-container {
   @include flex-column-center;
   gap: 30px;
-  min-height: 290px;
   width: 82.5%;
 
   @media (max-width: $breakpoint-tablet) {
-    width: 81.4%;
+    gap: 25px;
+    width: 91.25%;
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -24,13 +24,13 @@
 .collapse__top-bar {
   @include flex-center;
   justify-content: space-between;
-  padding: 11px 1.5% 9px;
+  padding: 10px 1.5% 10px;
   background: $light-red;
   border-radius: 5px;
 
   @media (max-width: $breakpoint-tablet) {
     height: 52px;
-    padding: 10px 1.5% 10px;
+    padding: 10px 1.8% 10px;
   }
 
   @media (max-width: $breakpoint-mobile) {

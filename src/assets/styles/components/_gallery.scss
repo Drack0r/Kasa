@@ -9,11 +9,20 @@
   background: $light-gray;
   border-radius: 25px;
 
-  @media (max-width: $breakpoint-mobile) {
-    gap: 20px;
+  @media (max-width: $breakpoint-laptop) {
+    gap: 40px 3.96%;
+    padding: 21px 1.7% 21px 1.7%;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    gap: 35px;
     padding: 0;
     background: none;
     border-radius: 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    gap: 20px;
   }
 }
 
@@ -21,11 +30,15 @@
   height: 340px;
   width: 29.45%;
 
-  @media (max-width: 1206px) {
-    width: 40%;
+  @media (max-width: $breakpoint-laptop) {
+    width: 44%;
   }
 
-  @media (max-width: 1026px) {
+  @media (max-width: 888px) {
+    width: 47%;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
     width: 100%;
   }
 

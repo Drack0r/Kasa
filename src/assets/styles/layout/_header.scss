@@ -8,6 +8,11 @@
   margin-top: 45px;
   padding: 0 6.9%;
 
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: 32px;
+    padding: 0 6.1%;
+  }
+
   @media (max-width: $breakpoint-mobile) {
     margin-top: 20px;
     padding: 0 5.3%;
@@ -17,6 +22,10 @@
 .header__logo img {
   height: 68px;
 
+  @media (max-width: $breakpoint-tablet) {
+    height: 57px;
+  }
+
   @media (max-width: $breakpoint-mobile) {
     height: 47px;
   }
@@ -25,6 +34,10 @@
 .header__nav-list {
   @include flex-center;
   gap: 57px;
+
+  @media (max-width: $breakpoint-tablet) {
+    gap: 42px;
+  }
 
   @media (max-width: $breakpoint-mobile) {
     gap: 26px;
@@ -57,6 +70,10 @@
 
   &:hover::before {
     background: rgba($black, 0.04);
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 1rem;
   }
 
   @media (max-width: $breakpoint-mobile) {

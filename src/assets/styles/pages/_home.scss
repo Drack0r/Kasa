@@ -6,6 +6,10 @@
   gap: 50px;
   width: 100%;
 
+  @media (max-width: $breakpoint-tablet) {
+    gap: 38px;
+  }
+
   @media (max-width: $breakpoint-mobile) {
     gap: 27px;
   }
@@ -16,6 +20,10 @@
   position: relative;
   width: 100%;
   padding: 0 6.9%;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 0 6.1%;
+  }
 
   @media (max-width: $breakpoint-mobile) {
     padding: 0 5.3%;
