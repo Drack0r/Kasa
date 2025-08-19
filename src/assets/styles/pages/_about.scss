@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-#app .about-page {
+.about-page {
   @include flex-column-center;
   gap: 38px;
   width: 100%;

@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.property-details-page {
+.property-page {
   @include flex-column-center;
   gap: 50px;
 }
