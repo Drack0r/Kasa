@@ -3,7 +3,7 @@ import { useFetch } from "../hooks/useFetch";
 import useLoadingState from "../hooks/useLoadingState";
 import { API_ENDPOINTS } from "../config/api";
 import { LOADING_MESSAGES } from "../constants/messages";
-import Slideshow from "../components/Slideshow";
+import Slideshow from "../components/common/Slideshow";
 
 export default function ApartmentDetails() {
   const { id } = useParams();

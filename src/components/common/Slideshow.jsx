@@ -6,16 +6,15 @@ export default function Slideshow({ images, title }) {
   // Si une seule image, pas besoin de navigation
   const showNavigation = images && images.length > 1;
 
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
+  // Fonction pour gérer la navigation
+  const navigate = (direction) => {
+    setCurrentIndex((prevIndex) => {
+      if (direction === "next") {
+        return prevIndex === images.length - 1 ? 0 : prevIndex + 1;
+      } else if (direction === "prev") {
+        return prevIndex === 0 ? images.length - 1 : prevIndex - 1;
+      }
+    });
   };
 
   // Gestion du cas où il n'y a pas d'images
@@ -41,7 +40,7 @@ export default function Slideshow({ images, title }) {
         <div className="slideshow__buttons-container">
           <button
             className="slideshow__button slideshow__button--prev"
-            onClick={goToPrevious}
+            onClick={() => navigate("prev")}
           >
             <img
               src="/src/assets/images/icons/chevron-left.png"
@@ -51,7 +50,7 @@ export default function Slideshow({ images, title }) {
 
           <button
             className="slideshow__button slideshow__button--next"
-            onClick={goToNext}
+            onClick={() => navigate("next")}
           >
             <img
               src="/src/assets/images/icons/chevron-right.png"

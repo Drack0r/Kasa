@@ -2,8 +2,8 @@ import { useFetch } from "../hooks/useFetch";
 import useLoadingState from "../hooks/useLoadingState";
 import { API_ENDPOINTS } from "../config/api";
 import { LOADING_MESSAGES } from "../constants/messages";
-import Hero from "../components/Hero";
-import ApartmentCard from "../components/ApartmentCard";
+import Hero from "../components/common/Hero";
+import ApartmentCard from "../components/cards/ApartmentCard";
 
 export default function Home() {
   // Fetch des données

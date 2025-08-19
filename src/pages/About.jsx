@@ -2,8 +2,8 @@ import { useFetch } from "../hooks/useFetch";
 import useLoadingState from "../hooks/useLoadingState";
 import { API_ENDPOINTS } from "../config/api";
 import { LOADING_MESSAGES } from "../constants/messages";
-import Hero from "../components/Hero";
-import Collapse from "../components/Collapse";
+import Hero from "../components/common/Hero";
+import Collapse from "../components/ui/Collapse";
 
 export default function About() {
   // Fetch des données

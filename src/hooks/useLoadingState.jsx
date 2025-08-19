@@ -1,4 +1,4 @@
-import Loading from "../components/Loading";
+import Loading from "../components/ui/Loading";
 
 export default function useLoadingState(loading, error, loadingMessage) {
   if (loading) {
