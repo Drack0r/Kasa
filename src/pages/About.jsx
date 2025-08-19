@@ -1,9 +1,9 @@
 import { useFetch } from "../hooks/useFetch";
+import useLoadingState from "../hooks/useLoadingState";
 import { API_ENDPOINTS } from "../config/api";
 import { LOADING_MESSAGES } from "../constants/messages";
 import Hero from "../components/Hero";
 import Collapse from "../components/Collapse";
-import Loading from "../components/Loading";
 
 export default function About() {
   // Fetch des données
@@ -13,14 +13,15 @@ export default function About() {
     error,
   } = useFetch(API_ENDPOINTS.ABOUT_PAGE_DATA);
 
-  // Gestion du chargement
-  if (loading) {
-    return <Loading message={LOADING_MESSAGES.ABOUT} />;
-  }
+  // Gestion du chargement et des erreurs
+  const { isLoading, content } = useLoadingState(
+    loading,
+    error,
+    LOADING_MESSAGES.ABOUT
+  );
 
-  // Gestion des erreurs
-  if (error) {
-    return <div className="error">Erreur : {error}</div>;
+  if (isLoading || error) {
+    return content;
   }
 
   return (

@@ -3,16 +3,12 @@
 @use "../abstracts/keyframes" as *;
 
 .loading {
-  @include flex-center;
+  @include flex-column-center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100vh;
-  width: 100vw;
-  background: rgba($light-gray, 0.5);
+  gap: 2em;
+  min-height: 50vh;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .loader {
@@ -20,7 +16,7 @@
   position: relative;
   height: 48px;
   width: 48px;
-  border: 3px solid #fff;
+  border: 3px solid rgba($light-gray, 0.5);
   border-radius: 50%;
   animation: rotation 1s linear infinite;
 }

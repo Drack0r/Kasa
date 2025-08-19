@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
+import useLoadingState from "../hooks/useLoadingState";
 import { API_ENDPOINTS } from "../config/api";
 import { LOADING_MESSAGES } from "../constants/messages";
 import Slideshow from "../components/Slideshow";
-import Loading from "../components/Loading";
 
 export default function PropertyDetails() {
   const { id } = useParams();
@@ -15,14 +15,15 @@ export default function PropertyDetails() {
     error,
   } = useFetch(API_ENDPOINTS.PROPERTIES);
 
-  // Gestion du chargement
-  if (loading) {
-    return <Loading message={LOADING_MESSAGES.PROPERTIES} />;
-  }
+  // Gestion du chargement et des erreurs
+  const { isLoading, content } = useLoadingState(
+    loading,
+    error,
+    LOADING_MESSAGES.PROPERTY
+  );
 
-  // Gestion des erreurs
-  if (error) {
-    return <div className="error">Erreur : {error}</div>;
+  if (isLoading || error) {
+    return content;
   }
 
   const currentProperty = properties.find((property) => property.id === id);
