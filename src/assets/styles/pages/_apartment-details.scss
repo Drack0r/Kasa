@@ -1,11 +1,11 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.property-page {
+.apartment-page {
   @include flex-column-center;
   gap: 50px;
 }
 
-.property-details {
+.apartment-details {
   width: 100%;
 }

@@ -97,11 +97,11 @@ src/
 │   ├── Loading.jsx            # Indicateur de chargement
 │   ├── Logo.jsx               # Logo avec thème clair/sombre
 │   ├── Navigation.jsx         # Menu de navigation
-│   └── PropertyCard.jsx       # Carte de propriété
+│   └── ApartmentCard.jsx       # Carte de propriété
 ├── 📑 pages/                   # Pages de l'application
 │   ├── Home.jsx               # Page d'accueil
 │   ├── About.jsx              # Page à propos
-│   ├── PropertyDetails.jsx    # Détails d'une propriété
+│   ├── ApartmentDetails.jsx    # Détails d'une propriété
 │   └── NotFound.jsx           # Page 404
 ├── 🔧 config/                  # Configuration
 │   └── api.js                 # Endpoints et timeouts
@@ -163,7 +163,7 @@ $breakpoint-desktop: 1240px;
 - Sections pliables (accordéons) avec informations sur l'entreprise
 - Animations fluides pour l'ouverture/fermeture des sections
 
-### 🏡 Détails de propriété (`/property/:id`)
+### 🏡 Détails de propriété (`/apartment/:id`)
 
 - Affichage des détails complets d'une propriété
 - Navigation par ID via l'URL
@@ -189,7 +189,7 @@ $breakpoint-desktop: 1240px;
 ```javascript
 // config/api.js
 export const API_ENDPOINTS = {
-  PROPERTIES: "/data/logements.json",
+  APARTMENTS: "/data/apartments.json",
   COLLAPSE_DATA: "/data/collapse.json",
 };
 

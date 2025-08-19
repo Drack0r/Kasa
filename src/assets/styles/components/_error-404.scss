@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.error-display {
+.error-404 {
   @include flex-column-center;
   gap: 139px;
 

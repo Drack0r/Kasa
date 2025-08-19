@@ -16,11 +16,11 @@
 @use "./components/gallery";
 @use "./components/collapse";
 @use "./components/loading";
-@use "./components/error-display";
+@use "./components/error-404";
 @use "./components/slideshow";
 
 // Pages
 @use "./pages/home";
 @use "./pages/about";
 @use "./pages/not-found";
-@use "./pages/property-details";
+@use "./pages/apartment-details";

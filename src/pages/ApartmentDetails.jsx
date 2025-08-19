@@ -5,50 +5,52 @@ import { API_ENDPOINTS } from "../config/api";
 import { LOADING_MESSAGES } from "../constants/messages";
 import Slideshow from "../components/Slideshow";
 
-export default function PropertyDetails() {
+export default function ApartmentDetails() {
   const { id } = useParams();
 
   // Fetch des données
   const {
-    data: properties,
+    data: apartments,
     loading,
     error,
-  } = useFetch(API_ENDPOINTS.PROPERTIES);
+  } = useFetch(API_ENDPOINTS.APARTMENTS);
 
   // Gestion du chargement et des erreurs
   const { isLoading, content } = useLoadingState(
     loading,
     error,
-    LOADING_MESSAGES.PROPERTY
+    LOADING_MESSAGES.APARTMENT
   );
 
   if (isLoading || error) {
     return content;
   }
 
-  const currentProperty = properties.find((property) => property.id === id);
+  const currentApartment = apartments.find((apartment) => apartment.id === id);
 
   // Gestion du cas où la propriété n'existe pas
-  if (!currentProperty) {
+  if (!currentApartment) {
     return <div className="error">Propriété non trouvée</div>;
   }
 
   return (
     <>
       {/* Slideshow */}
-      <section className="property-details">
+      <section className="apartment-details">
         <Slideshow
-          images={currentProperty.pictures}
-          title={currentProperty.title}
+          images={currentApartment.pictures}
+          title={currentApartment.title}
         />
 
         {/* Temporary */}
-        <div className="property__infos">
-          <h2 className="property__title">{currentProperty.title}</h2>
+        <div className="apartment__infos">
+          <h2 className="apartment__title">{currentApartment.title}</h2>
 
-          <p className="property__location">{currentProperty.location}</p>
+          <p className="apartment__location">{currentApartment.location}</p>
 
-          <p className="property__description">{currentProperty.description}</p>
+          <p className="apartment__description">
+            {currentApartment.description}
+          </p>
         </div>
       </section>
     </>

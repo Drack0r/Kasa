@@ -1,8 +1,8 @@
 export const API_ENDPOINTS = {
-  PROPERTIES: "/data/properties.json",
-  ABOUT_PAGE_DATA: "/data/about-page.json",
+  APARTMENTS: "/data/apartments.json",
+  ABOUT_DATA: "/data/about-infos.json",
 };
 
 export const TIMEOUTS = {
-  LOADING_DELAY: 10000,
+  LOADING_DELAY: 1000,
 };

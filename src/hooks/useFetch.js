@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { TIMEOUTS } from "../config/api";
 
-export function useFetch(dataSrc) {
+export function useFetch(dataSource) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -15,11 +15,11 @@ export function useFetch(dataSrc) {
         setError(null);
 
         // Délai artificiel pour voir le loader
-        // await new Promise((resolve) =>
-        //   setTimeout(resolve, TIMEOUTS.LOADING_DELAY)
-        // );
+        await new Promise((resolve) =>
+          setTimeout(resolve, TIMEOUTS.LOADING_DELAY)
+        );
 
-        const response = await fetch(dataSrc);
+        const response = await fetch(dataSource);
 
         if (!response.ok) {
           throw new Error(`HTTP error ! status : ${response.status}`);
@@ -48,7 +48,7 @@ export function useFetch(dataSrc) {
     return () => {
       isMounted = false;
     };
-  }, [dataSrc]);
+  }, [dataSource]);
 
   return { data, loading, error };
 }

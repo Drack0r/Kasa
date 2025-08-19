@@ -3,21 +3,21 @@ import useLoadingState from "../hooks/useLoadingState";
 import { API_ENDPOINTS } from "../config/api";
 import { LOADING_MESSAGES } from "../constants/messages";
 import Hero from "../components/Hero";
-import PropertyCard from "../components/PropertyCard";
+import ApartmentCard from "../components/ApartmentCard";
 
 export default function Home() {
   // Fetch des données
   const {
-    data: properties,
+    data: apartments,
     loading,
     error,
-  } = useFetch(API_ENDPOINTS.PROPERTIES);
+  } = useFetch(API_ENDPOINTS.APARTMENTS);
 
   // Gestion du chargement et des erreurs
   const { isLoading, content } = useLoadingState(
     loading,
     error,
-    LOADING_MESSAGES.PROPERTIES
+    LOADING_MESSAGES.APARTMENTS
   );
 
   if (isLoading || error) {
@@ -37,12 +37,12 @@ export default function Home() {
 
       {/* Gallery */}
       <section className="gallery">
-        {properties && properties.length > 0 ? (
-          properties.map((property) => (
-            <PropertyCard property={property} key={property.id} />
+        {apartments && apartments.length > 0 ? (
+          apartments.map((apartment) => (
+            <ApartmentCard apartment={apartment} key={apartment.id} />
           ))
         ) : (
-          <span className="no-available-property">
+          <span className="no-available-apartment">
             Aucune propriété disponible
           </span>
         )}

@@ -15,8 +15,8 @@ export default function App() {
       case "/about":
         return "about-page";
       default:
-        if (pathname.startsWith("/property/")) {
-          return "property-page";
+        if (pathname.startsWith("/apartment/")) {
+          return "apartment-page";
         }
         return "not-found-page";
     }

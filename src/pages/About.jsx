@@ -11,7 +11,7 @@ export default function About() {
     data: collapseData,
     loading,
     error,
-  } = useFetch(API_ENDPOINTS.ABOUT_PAGE_DATA);
+  } = useFetch(API_ENDPOINTS.ABOUT_DATA);
 
   // Gestion du chargement et des erreurs
   const { isLoading, content } = useLoadingState(
