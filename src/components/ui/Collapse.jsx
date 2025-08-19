@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Collapse({ title, textContent }) {
+export default function Collapse({ title = "Titre", textContent = "" }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {

@@ -1,4 +1,4 @@
-export default function Logo({ logoTheme }) {
+export default function Logo({ logoTheme = "light" }) {
   const logo = {
     light: "/src/assets/images/logo/logo-light.png",
     dark: "/src/assets/images/logo/logo-dark.png",

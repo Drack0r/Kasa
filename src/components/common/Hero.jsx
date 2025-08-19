@@ -1,8 +1,8 @@
 export default function Hero({
-  textContent,
-  backgroundImage,
-  isInnerShadowed,
-  isBoxShadowed,
+  textContent = "",
+  backgroundImage = "",
+  isInnerShadowed = false,
+  isBoxShadowed = false,
   innerShadowOpacity = 0.6,
 }) {
   const heroClass = `hero ${isBoxShadowed ? "hero--box-shadowed" : ""} ${

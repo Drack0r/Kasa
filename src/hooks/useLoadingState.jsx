@@ -1,6 +1,10 @@
 import Loading from "../components/ui/Loading";
 
-export default function useLoadingState(loading, error, loadingMessage) {
+export default function useLoadingState(
+  loading,
+  error,
+  loadingMessage = "Chargement en cours..."
+) {
   if (loading) {
     return { isLoading: true, content: <Loading message={loadingMessage} /> };
   }

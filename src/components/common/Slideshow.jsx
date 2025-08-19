@@ -1,13 +1,18 @@
 import { useState } from "react";
 
-export default function Slideshow({ images, title }) {
+export default function Slideshow({ images = [], title = "Image" }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   // Si une seule image, pas besoin de navigation
   const showNavigation = images && images.length > 1;
 
   // Fonction pour gérer la navigation
   const navigate = (direction) => {
+    if (isAnimating) return;
+
+    setIsAnimating(true);
+
     setCurrentIndex((prevIndex) => {
       if (direction === "next") {
         return prevIndex === images.length - 1 ? 0 : prevIndex + 1;
@@ -15,6 +20,8 @@ export default function Slideshow({ images, title }) {
         return prevIndex === 0 ? images.length - 1 : prevIndex - 1;
       }
     });
+
+    setTimeout(() => setIsAnimating(false), 500);
   };
 
   // Gestion du cas où il n'y a pas d'images
@@ -29,11 +36,24 @@ export default function Slideshow({ images, title }) {
   return (
     <article className="slideshow">
       {/* Image principale */}
-      <img
-        src={images[currentIndex]}
-        alt={`${title} - Image ${currentIndex + 1}`}
-        className="slideshow__image"
-      />
+      <div className="slideshow__container">
+        <div
+          className="slideshow__track"
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+            transition: isAnimating ? "transform 0.5s ease-in-out" : "none",
+          }}
+        >
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`${title} - Image ${index + 1}`}
+              className="slideshow__image"
+            />
+          ))}
+        </div>
+      </div>
 
       {/* Boutons de navigation */}
       {showNavigation && (
