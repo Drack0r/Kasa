@@ -116,3 +116,13 @@
     font-size: 0.66rem;
   }
 }
+
+.collapse__list {
+  font-weight: 400;
+  line-height: 1.43;
+  color: $black;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 0.66rem;
+  }
+}

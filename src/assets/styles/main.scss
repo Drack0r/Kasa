@@ -18,6 +18,9 @@
 @use "./components/loading";
 @use "./components/error-404";
 @use "./components/slideshow";
+@use "./components/tags";
+@use "./components/owner";
+@use "./components/rating";
 
 // Pages
 @use "./pages/home";

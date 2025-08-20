@@ -15,9 +15,11 @@ export function useFetch(dataSource) {
         setError(null);
 
         // Délai artificiel pour voir le loader
+        /*
         await new Promise((resolve) =>
           setTimeout(resolve, TIMEOUTS.LOADING_DELAY)
         );
+        */
 
         const response = await fetch(dataSource);
 

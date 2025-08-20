@@ -7,6 +7,22 @@ export default function Collapse({ title = "Titre", textContent = "" }) {
     setIsOpen(!isOpen);
   };
 
+  // Rendre le contenu selon son type
+  const renderContent = () => {
+    if (Array.isArray(textContent)) {
+      return (
+        <ul className="collapse__list">
+          {textContent.map((item, index) => (
+            <li key={index} className="collapse__list-item">
+              {item}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    return <p className="collapse__text">{textContent}</p>;
+  };
+
   return (
     <article className="collapse">
       <div className="collapse__top-bar">
@@ -28,7 +44,7 @@ export default function Collapse({ title = "Titre", textContent = "" }) {
           isOpen ? "collapse__text-container--open" : ""
         }`}
       >
-        <p className="collapse__text">{textContent}</p>
+        {renderContent()}
       </div>
     </article>
   );

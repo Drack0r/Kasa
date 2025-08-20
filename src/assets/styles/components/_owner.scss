@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.apartment__owner-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 0.5%;
+
+  @media (max-width: 880px) {
+    position: static;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    padding: 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 13px;
+  }
+}
+
+.apartment__owner {
+  @include flex-center;
+  gap: 10px;
+  height: 64px;
+  width: 83.91%;
+  margin-bottom: 21px;
+
+  @media (max-width: 880px) {
+    height: 48px;
+    width: 20%;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 32px;
+    width: 25%;
+  }
+}
+
+.owner__name {
+  line-height: 1.43;
+  text-align: right;
+  color: $light-red;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 0.82rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 0.66rem;
+  }
+}
+
+.owner__avatar {
+  height: 64px;
+  border-radius: 50%;
+
+  @media (max-width: $breakpoint-tablet) {
+    height: 48px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 32px;
+  }
+}

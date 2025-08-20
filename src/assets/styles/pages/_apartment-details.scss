@@ -4,8 +4,82 @@
 .apartment-page {
   @include flex-column-center;
   gap: 50px;
+
+  @media (max-width: $breakpoint-tablet) {
+    gap: 38px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    gap: 27px;
+  }
 }
 
 .apartment-details {
   width: 100%;
+}
+
+.apartment__description {
+  position: relative;
+}
+
+.apartment__infos {
+  margin-bottom: 20px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 10px;
+  }
+}
+
+.apartment__title {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.43;
+  color: $light-red;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1rem;
+  }
+}
+
+.apartment__location {
+  color: $black;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 0.88rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 0.77rem;
+  }
+}
+
+.apartment__collapse-container {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoint-tablet) {
+    @include flex-column-center;
+    gap: 30px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    @include flex-column-center;
+    gap: 20px;
+  }
+}
+
+.apartment-page .collapse {
+  width: 46.96%;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+  }
 }

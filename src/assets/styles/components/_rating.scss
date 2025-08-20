@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.apartment__rating {
+  @include flex-center;
+  gap: 4px;
+  height: 36px;
+
+  @media (max-width: $breakpoint-tablet) {
+    gap: 2px;
+    height: 27px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 18px;
+  }
+}
+
+.rating__star {
+  @include flex-center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+
+  @media (max-width: $breakpoint-tablet) {
+    height: 25px;
+    width: 25px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 18px;
+    width: 18px;
+  }
+
+  & img {
+    @media (max-width: $breakpoint-tablet) {
+      height: 18px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      height: 13px;
+    }
+  }
+}

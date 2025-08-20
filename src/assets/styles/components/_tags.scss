@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.apartment__tags-container {
+  display: flex;
+  gap: 10px;
+  height: 25px;
+  margin-bottom: 24px;
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 18px;
+    margin-bottom: 16px;
+  }
+}
+
+.tag {
+  @include flex-center;
+  justify-content: center;
+  min-width: 115px;
+  padding: 0 1.5em;
+  font-size: 0.77rem;
+  font-weight: 700;
+  color: $white;
+  background: $light-red;
+  border-radius: 10px;
+
+  @media (max-width: $breakpoint-mobile) {
+    min-width: 84px;
+    padding: 0 1em;
+    font-size: 0.55rem;
+    border-radius: 5px;
+  }
+}

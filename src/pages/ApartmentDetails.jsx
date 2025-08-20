@@ -1,9 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 import useLoadingState from "../hooks/useLoadingState";
 import { API_ENDPOINTS } from "../config/api";
 import { LOADING_MESSAGES } from "../constants/messages";
 import Slideshow from "../components/common/Slideshow";
+import Collapse from "../components/ui/Collapse";
+import Tag from "../components/ui/Tag";
+import Owner from "../components/ui/Owner";
+import Rating from "../components/ui/Rating";
 
 export default function ApartmentDetails() {
   const { id } = useParams();
@@ -28,6 +32,11 @@ export default function ApartmentDetails() {
 
   const currentApartment = apartments.find((apartment) => apartment.id === id);
 
+  // Redirection vers la page 404 si l'appartement n'existe pas
+  if (!currentApartment) {
+    return <Navigate to="/404" replace />;
+  }
+
   // Gestion du cas où la propriété n'existe pas
   if (!currentApartment) {
     return <div className="error">Propriété non trouvée</div>;
@@ -42,15 +51,42 @@ export default function ApartmentDetails() {
           title={currentApartment.title}
         />
 
-        {/* Temporary */}
-        <div className="apartment__infos">
-          <h2 className="apartment__title">{currentApartment.title}</h2>
+        <div className="apartment__description">
+          {/* Infos */}
+          <div className="apartment__infos">
+            <h2 className="apartment__title">{currentApartment.title}</h2>
+            <p className="apartment__location">{currentApartment.location}</p>
+          </div>
 
-          <p className="apartment__location">{currentApartment.location}</p>
+          {/* Tags */}
+          <div className="apartment__tags-container">
+            {currentApartment.tags.map((tag, index) => (
+              <Tag key={index} title={tag} />
+            ))}
+          </div>
 
-          <p className="apartment__description">
-            {currentApartment.description}
-          </p>
+          {/* Owner et Rating */}
+          <div className="apartment__owner-rating">
+            <Owner
+              name={currentApartment.host.name}
+              avatar={currentApartment.host.picture}
+            />
+
+            <Rating rating={currentApartment.rating} />
+          </div>
+
+          {/* Collapse */}
+          <div className="apartment__collapse-container">
+            <Collapse
+              title="Description"
+              textContent={currentApartment.description}
+            />
+
+            <Collapse
+              title="Équipements"
+              textContent={currentApartment.equipments}
+            />
+          </div>
         </div>
       </section>
     </>
