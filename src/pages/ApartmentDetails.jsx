@@ -9,6 +9,32 @@ import Tag from "../components/ui/Tag";
 import Owner from "../components/ui/Owner";
 import Rating from "../components/ui/Rating";
 
+/**
+ * Composant ApartmentDetails qui affiche les détails complets d'un appartement.
+ * Récupère l'ID depuis l'URL et affiche toutes les informations de l'appartement avec gestion des erreurs 404.
+ *
+ * @component
+ * @returns {JSX.Element} La page de détails d'appartement avec slideshow, informations et sections pliables
+ *
+ * @example
+ * // Utilisation dans le routeur avec paramètre d'ID
+ * <Route path="/apartment/:id" element={<ApartmentDetails />} />
+ *
+ * @example
+ * // URL d'accès
+ * // /apartment/c67ab8a7 (affiche les détails de l'appartement)
+ * // /apartment/invalid-id (redirige vers /404)
+ *
+ * @example
+ * // Utilisation directe (nécessite un contexte de routeur)
+ * <ApartmentDetails />
+ *
+ * @example
+ * // Utilisation dans un layout
+ * <Layout>
+ *   <ApartmentDetails />
+ * </Layout>
+ */
 export default function ApartmentDetails() {
   const { id } = useParams();
 
@@ -60,8 +86,8 @@ export default function ApartmentDetails() {
 
           {/* Tags */}
           <div className="apartment__tags-container">
-            {currentApartment.tags.map((tag, index) => (
-              <Tag key={index} title={tag} />
+            {currentApartment.tags.map((tag) => (
+              <Tag key={tag} title={tag} />
             ))}
           </div>
 

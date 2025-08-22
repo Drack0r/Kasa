@@ -1,5 +1,43 @@
 import { useState } from "react";
 
+/**
+ * Composant Slideshow qui affiche un carrousel d'images avec navigation.
+ * Gère automatiquement l'affichage selon le nombre d'images (navigation cachée si une seule image).
+ *
+ * @component
+ * @param {string[]} [images=[]] - Tableau des URLs des images à afficher
+ * @param {string} [title="Image"] - Titre utilisé pour les attributs alt des images
+ * @returns {JSX.Element} Un article contenant le carrousel avec navigation et indicateur de position
+ *
+ * @example
+ * // Utilisation avec plusieurs images
+ * <Slideshow
+ *   images={[
+ *     "/images/apartment1.jpg",
+ *     "/images/apartment2.jpg",
+ *     "/images/apartment3.jpg"
+ *   ]}
+ *   title="Appartement cosy"
+ * />
+ *
+ * @example
+ * // Utilisation avec une seule image (navigation masquée)
+ * <Slideshow
+ *   images={["/images/single-apartment.jpg"]}
+ *   title="Studio moderne"
+ * />
+ *
+ * @example
+ * // Utilisation avec tableau vide (affiche message d'erreur)
+ * <Slideshow images={[]} title="Appartement" />
+ *
+ * @example
+ * // Utilisation avec données d'appartement
+ * <Slideshow
+ *   images={currentApartment.pictures}
+ *   title={currentApartment.title}
+ * />
+ */
 export default function Slideshow({ images = [], title = "Image" }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -46,7 +84,7 @@ export default function Slideshow({ images = [], title = "Image" }) {
         >
           {images.map((image, index) => (
             <img
-              key={index}
+              key={image}
               src={image}
               alt={`${title} - Image ${index + 1}`}
               className="slideshow__image"

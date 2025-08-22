@@ -5,6 +5,27 @@ import { LOADING_MESSAGES } from "../constants/messages";
 import Hero from "../components/common/Hero";
 import Collapse from "../components/ui/Collapse";
 
+/**
+ * Composant About qui affiche la page "À propos" de l'application.
+ * Contient une bannière hero sans texte et des sections pliables avec informations sur Kasa.
+ *
+ * @component
+ * @returns {JSX.Element} La page "À propos" avec hero et sections collapse
+ *
+ * @example
+ * // Utilisation dans le routeur
+ * <Route path="/about" element={<About />} />
+ *
+ * @example
+ * // Utilisation directe
+ * <About />
+ *
+ * @example
+ * // Utilisation dans un layout
+ * <Layout>
+ *   <About />
+ * </Layout>
+ */
 export default function About() {
   // Fetch des données
   const {

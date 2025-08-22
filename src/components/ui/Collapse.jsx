@@ -1,5 +1,43 @@
 import { useState } from "react";
 
+/**
+ * Composant Collapse qui affiche un contenu pliable/dépliable avec titre et contenu.
+ * Gère automatiquement l'affichage selon le type de contenu (texte ou liste).
+ *
+ * @component
+ * @param {string} [title="Titre"] - Le titre affiché dans la barre de navigation
+ * @param {string|string[]} [textContent=""] - Le contenu à afficher (texte simple ou tableau pour une liste)
+ * @returns {JSX.Element} Un article contenant une section pliable avec titre et contenu
+ *
+ * @example
+ * // Utilisation avec du texte simple
+ * <Collapse
+ *   title="Description"
+ *   textContent="Voici la description de l'appartement..."
+ * />
+ *
+ * @example
+ * // Utilisation avec une liste d'équipements
+ * <Collapse
+ *   title="Équipements"
+ *   textContent={["WiFi", "Climatisation", "Machine à laver", "Télévision"]}
+ * />
+ *
+ * @example
+ * // Utilisation avec valeurs par défaut
+ * <Collapse />
+ *
+ * @example
+ * // Utilisation avec données d'appartement
+ * <Collapse
+ *   title="Description"
+ *   textContent={currentApartment.description}
+ * />
+ * <Collapse
+ *   title="Équipements"
+ *   textContent={currentApartment.equipments}
+ * />
+ */
 export default function Collapse({ title = "Titre", textContent = "" }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,8 +50,8 @@ export default function Collapse({ title = "Titre", textContent = "" }) {
     if (Array.isArray(textContent)) {
       return (
         <ul className="collapse__list">
-          {textContent.map((item, index) => (
-            <li key={index} className="collapse__list-item">
+          {textContent.map((item) => (
+            <li key={item} className="collapse__list-item">
               {item}
             </li>
           ))}

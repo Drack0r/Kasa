@@ -5,6 +5,27 @@ import { LOADING_MESSAGES } from "../constants/messages";
 import Hero from "../components/common/Hero";
 import ApartmentCard from "../components/cards/ApartmentCard";
 
+/**
+ * Composant Home qui affiche la page d'accueil de l'application.
+ * Contient une bannière hero et une galerie d'appartements avec gestion du chargement et des erreurs.
+ *
+ * @component
+ * @returns {JSX.Element} La page d'accueil avec hero et galerie d'appartements
+ *
+ * @example
+ * // Utilisation dans le routeur
+ * <Route path="/" element={<Home />} />
+ *
+ * @example
+ * // Utilisation directe
+ * <Home />
+ *
+ * @example
+ * // Utilisation dans un layout
+ * <Layout>
+ *   <Home />
+ * </Layout>
+ */
 export default function Home() {
   // Fetch des données
   const {
