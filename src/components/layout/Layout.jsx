@@ -1,4 +1,4 @@
-import usePageClass from "../../hooks/usePageClass";
+import usePageClass from "../../hooks/usePageClass.js";
 import Header from "./Header";
 import Footer from "./Footer";
 

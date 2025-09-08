@@ -56,7 +56,7 @@ export default function Slideshow({ images = [], title = "Image" }) {
         return prevIndex === images.length - 1 ? 0 : prevIndex + 1;
       } else if (direction === "prev") {
         return prevIndex === 0 ? images.length - 1 : prevIndex - 1;
-      }
+      } // return
     });
 
     setTimeout(() => setIsAnimating(false), 500);

@@ -26,7 +26,9 @@ import Navigation from "../common/Navigation";
 export default function Header() {
   return (
     <header className="header">
-      <Logo logoTheme="light" />
+      <h1>
+        <Logo logoTheme="light" />
+      </h1>
       <Navigation />
     </header>
   );

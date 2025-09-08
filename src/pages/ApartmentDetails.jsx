@@ -1,8 +1,8 @@
 import { useParams, Navigate } from "react-router-dom";
-import { useFetch } from "../hooks/useFetch";
+import { useFetch } from "../hooks/useFetch.js";
 import useLoadingState from "../hooks/useLoadingState";
-import { API_ENDPOINTS } from "../config/api";
-import { LOADING_MESSAGES } from "../constants/messages";
+import { API_ENDPOINTS } from "../config/api.js";
+import { LOADING_MESSAGES } from "../constants/messages.js";
 import Slideshow from "../components/common/Slideshow";
 import Collapse from "../components/ui/Collapse";
 import Tag from "../components/ui/Tag";
@@ -61,11 +61,6 @@ export default function ApartmentDetails() {
   // Redirection vers la page 404 si l'appartement n'existe pas
   if (!currentApartment) {
     return <Navigate to="/404" replace />;
-  }
-
-  // Gestion du cas où la propriété n'existe pas
-  if (!currentApartment) {
-    return <div className="error">Propriété non trouvée</div>;
   }
 
   return (

@@ -1,3 +1,4 @@
+import { ROUTES } from "../../constants/routes.js";
 import { Link } from "react-router-dom";
 
 /**
@@ -29,7 +30,7 @@ export default function Error404() {
         vous demandez n'existe pas.
       </p>
 
-      <Link to="/" className="error__home-link">
+      <Link to={ROUTES.HOME} className="error__home-link">
         Retourner sur la page d’accueil
       </Link>
     </section>

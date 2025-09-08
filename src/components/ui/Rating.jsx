@@ -1,32 +1,27 @@
 /**
- * Composant Owner qui affiche les informations du propriétaire d'un appartement.
- * Affiche le nom et l'avatar du propriétaire dans un format horizontal.
+ * Composant Rating qui affiche une évaluation sous forme d'étoiles.
+ * Affiche des étoiles pleines et vides selon la note fournie.
  *
  * @component
- * @param {string} name - Le nom complet du propriétaire
- * @param {string} avatar - L'URL de l'image avatar du propriétaire
- * @returns {JSX.Element} Un div contenant le nom et l'avatar du propriétaire
+ * @param {Object} props - Les propriétés du composant
+ * @param {number|string} [props.rating=0] - La note à afficher (entre 0 et 5)
+ * @returns {JSX.Element} Un div contenant les étoiles de notation
  *
  * @example
- * // Utilisation simple
- * <Owner
- *   name="John Doe"
- *   avatar="/images/avatar-john.jpg"
- * />
+ * // Utilisation avec une note de 3
+ * <Rating rating={3} />
+ *
+ * @example
+ * // Utilisation avec une note sous forme de chaîne
+ * <Rating rating="4" />
  *
  * @example
  * // Utilisation avec des données d'appartement
- * <Owner
- *   name={currentApartment.host.name}
- *   avatar={currentApartment.host.picture}
- * />
+ * <Rating rating={currentApartment.rating} />
  *
  * @example
- * // Utilisation avec nom composé
- * <Owner
- *   name="Marie-Claire Dubois"
- *   avatar="/images/avatar-marie.jpg"
- * />
+ * // Utilisation sans props (note par défaut de 0)
+ * <Rating />
  */
 export default function Rating({ rating = 0 }) {
   const maxStars = 5;

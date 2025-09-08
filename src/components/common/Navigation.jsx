@@ -1,3 +1,4 @@
+import { ROUTES } from "../../constants/routes.js";
 import { NavLink } from "react-router-dom";
 
 /**
@@ -18,13 +19,13 @@ export default function Navigation() {
     <nav className="header__nav">
       <ul className="header__nav-list">
         <li className="header__nav-item">
-          <NavLink to="/" className={navLinkClass}>
+          <NavLink to={ROUTES.HOME} className={navLinkClass}>
             Accueil
           </NavLink>
         </li>
 
         <li className="header__nav-item">
-          <NavLink to="/about" className={navLinkClass}>
+          <NavLink to={ROUTES.ABOUT} className={navLinkClass}>
             A propos
           </NavLink>
         </li>

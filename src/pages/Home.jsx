@@ -1,7 +1,7 @@
-import { useFetch } from "../hooks/useFetch";
+import { useFetch } from "../hooks/useFetch.js";
 import useLoadingState from "../hooks/useLoadingState";
-import { API_ENDPOINTS } from "../config/api";
-import { LOADING_MESSAGES } from "../constants/messages";
+import { API_ENDPOINTS } from "../config/api.js";
+import { LOADING_MESSAGES } from "../constants/messages.js";
 import Hero from "../components/common/Hero";
 import ApartmentCard from "../components/cards/ApartmentCard";
 
