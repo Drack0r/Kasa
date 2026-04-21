@@ -2,6 +2,7 @@ import { ROUTES } from "../constants/routes.js";
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Loading from "../components/ui/Loading";
+import Contact from "../pages/Contact.jsx";
 
 const Home = lazy(() => import("../pages/Home"));
 const About = lazy(() => import("../pages/About"));
@@ -48,6 +49,7 @@ export default function Router() {
           path={`${ROUTES.APARTMENT_PREFIX}:id`}
           element={<ApartmentDetails />}
         />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
