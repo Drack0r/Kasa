@@ -100,20 +100,14 @@ export default function Slideshow({ images = [], title = "Image" }) {
             className="slideshow__button slideshow__button--prev"
             onClick={() => navigate("prev")}
           >
-            <img
-              src="/src/assets/images/icons/chevron-left.png"
-              alt="Précédent"
-            />
+            <img src="/images/icons/chevron-left.png" alt="Précédent" />
           </button>
 
           <button
             className="slideshow__button slideshow__button--next"
             onClick={() => navigate("next")}
           >
-            <img
-              src="/src/assets/images/icons/chevron-right.png"
-              alt="Suivant"
-            />
+            <img src="/images/icons/chevron-right.png" alt="Suivant" />
           </button>
         </div>
       )}

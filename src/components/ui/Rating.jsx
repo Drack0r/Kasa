@@ -42,8 +42,8 @@ export default function Rating({ rating = 0 }) {
             <img
               src={
                 isFilled
-                  ? "/src/assets/images/icons/rating-star-filled.png"
-                  : "/src/assets/images/icons/rating-star-empty.png"
+                  ? "/images/icons/rating-star-filled.png"
+                  : "/images/icons/rating-star-empty.png"
               }
               alt={isFilled ? "Étoile remplie" : "Étoile vide"}
             />

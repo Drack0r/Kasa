@@ -38,7 +38,7 @@ export default function Home() {
   const { isLoading, content } = useLoadingState(
     loading,
     error,
-    LOADING_MESSAGES.APARTMENTS
+    LOADING_MESSAGES.APARTMENTS,
   );
 
   if (isLoading || error) {
@@ -50,7 +50,7 @@ export default function Home() {
       {/* Hero */}
       <Hero
         textContent={"Chez vous, partout et ailleurs"}
-        backgroundImage="/src/assets/images/backgrounds/hero-background-1.jpg"
+        backgroundImage="/images/backgrounds/hero-background-1.jpg"
         isInnerShadowed={true}
         isBoxShadowed={true}
         innerShadowOpacity={0.6}

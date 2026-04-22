@@ -38,7 +38,7 @@ export default function About() {
   const { isLoading, content } = useLoadingState(
     loading,
     error,
-    LOADING_MESSAGES.ABOUT
+    LOADING_MESSAGES.ABOUT,
   );
 
   if (isLoading || error) {
@@ -50,7 +50,7 @@ export default function About() {
       {/* Hero */}
       <Hero
         textContent={""}
-        backgroundImage={"/src/assets/images/backgrounds/hero-background-2.jpg"}
+        backgroundImage={"/images/backgrounds/hero-background-2.jpg"}
         isInnerShadowed={true}
         isBoxShadowed={false}
         innerShadowOpacity={0.3}

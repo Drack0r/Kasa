@@ -68,7 +68,7 @@ export default function Collapse({ title = "Titre", textContent = "" }) {
 
         <button className="collapse__btn" onClick={handleClick}>
           <img
-            src="/src/assets/images/icons/chevron-up.png"
+            src="/images/icons/chevron-up.png"
             alt={`Icône de chevron ${isOpen ? "ouvert" : "fermé"}`}
             className={`collapse__icon ${
               isOpen ? "collapse__icon--rotated" : ""
